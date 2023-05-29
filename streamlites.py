@@ -11,7 +11,7 @@ lin_reg_model = load('models/Formula1_LinearRegressionModel.joblib')
 random_forest_model = load('models/Formula1_RandomForestModel.joblib')
 decision_tree_model = load('models/Formula1_DecisionTreeModel.joblib')
 
-#Létrehozzuk a Streamlit alkalmazást
+# Létrehozzuk a Streamlit alkalmazást
 st.title('Formula 1-es köridő predikció')
 
 # Az input mezők létrehozása
@@ -21,10 +21,10 @@ for feature in input_features:
     value = st.sidebar.slider(feature, 0.0, 10.0, 5.0)  # módosítsd az értékeket a feature-ök szerint
     input_data.append(value)
 
-    # Gomb a predikció indításához
-    run_prediction = st.button('Predikció indítása')
-    
-    # Ha a gombot megnyomták, lefuttatjuk a predikciókat
+# Gomb a predikció indításához
+run_prediction = st.button('Predikció indítása')
+
+# Ha a gombot megnyomták, lefuttatjuk a predikciókat
 if run_prediction:
     # Modellek futtatása
     prediction_lin_reg = lin_reg_model.predict(np.array(input_data).reshape(1, -1))
