@@ -20,6 +20,10 @@ input_features = ['Feature1', 'Feature2', 'Feature3']  # helyettesítsd a helyes
 for feature in input_features:
     value = st.sidebar.slider(feature, 0.0, 10.0, 5.0)  # módosítsd az értékeket a feature-ök szerint
     input_data.append(value)
+
+    # Gomb a predikció indításához
+    run_prediction = st.button('Predikció indítása')
+    
     # Ha a gombot megnyomták, lefuttatjuk a predikciókat
 if run_prediction:
     # Modellek futtatása
