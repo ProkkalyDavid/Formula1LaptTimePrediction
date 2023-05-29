@@ -1,5 +1,4 @@
 #Importáljuk a szükséges csomagokat
-pip install joblib
 import streamlit as st
 from joblib import load
 from sklearn.ensemble import RandomForestRegressor
