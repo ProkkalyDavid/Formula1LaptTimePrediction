@@ -16,7 +16,7 @@ st.title('Formula 1-es köridő predikció')
 
 # Az input mezők létrehozása
 input_data = []
-input_features = ['Feature1', 'Feature2', 'Feature3']  # helyettesítsd a helyes feature nevekkel
+input_features = ['Lap number']  # helyettesítsd a helyes feature nevekkel
 for feature in input_features:
     value = st.sidebar.slider(feature, 0.0, 10.0, 5.0)  # módosítsd az értékeket a feature-ök szerint
     input_data.append(value)
